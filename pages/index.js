@@ -8,7 +8,7 @@ const Home = (props) => (
   <div className={styles.container}>
     <Head>
       <title>Christopher King</title>
-      <link rel="icon" href="/favicon.ico" />
+      <link rel="icon" href="/pynchon-favicon.ico" />
     </Head>
 
     <main className={styles.main}>
@@ -20,26 +20,15 @@ const Home = (props) => (
         <code className={styles.code}>Software Engineer, Pianist, Traveler</code>
       </p>
 
-      {/* <div className={styles.grid}> */}
-        {/* <a href="https://nextjs.org/docs" className={styles.card}>
-          <h3>Software &rarr;</h3>
-          <p>Engineering life.</p>
-        </a>
-
-        <a href="https://nextjs.org/learn" className={styles.card}>
-          <h3>Music &rarr;</h3>
-          <p>Mostly classical.</p>
-        </a> */}
-
-        <a
-          href="https://github.com/vercel/next.js/tree/master/examples"
-        >
-          {/* <h3 className={styles.aboutMeLink}>About Me</h3> */}
+      <Link
+        href={`/about-me`}
+        as={`/about-me`}
+      >
+        <a>
           <p className={styles.aboutMeButton}>About Me</p>
         </a>
-      {/* </div> */}
+      </Link>
 
-      {/* Put pic of myself instead of the *** */}
       <div className={styles.profilePicDiv}>
         <Image
           src="/chris_profile_cropped.jpg"
