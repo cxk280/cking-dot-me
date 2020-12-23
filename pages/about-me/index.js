@@ -1,21 +1,16 @@
-import Link           from 'next/link'
-import { getPosts }   from '../api/posts'
+import markdownToHtml from '../../lib/markdownToHtml'
+import aboutMeMarkdown from '../../_markdown/aboutMe.md'
 
-const FeedIndex = (props) => (
-  <ul>
-    {props.posts.map(post => (
-      <li key={post.id}>
-        <Link href={`/[slug]`} as={`/${post.slug}`}>
-          <a>{post.title}</a>
-        </Link>
-      </li>
-    ))}
-  </ul>
+const Index = (props) => (
+  <div
+    // className={markdownStyles['markdown']}
+    dangerouslySetInnerHTML={{ __html: props.content }}
+  />
 )
 
-FeedIndex.getInitialProps = async () => {
-  const posts = await getPosts();
-  return { posts: posts }
+Index.getInitialProps = async () => {
+  const content = await markdownToHtml(aboutMeMarkdown)
+  return { content: content }
 }
 
-export default FeedIndex
+export default Index
