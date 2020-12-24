@@ -1,0 +1,7 @@
+{
+  "conventionalCommits.scopes": [
+    "index page",
+    "about-me",
+    "posts"
+  ]
+}
