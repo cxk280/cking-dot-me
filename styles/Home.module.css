@@ -9,7 +9,7 @@
 }
 
 .main {
-  padding: 5rem 0;
+  padding: 2rem 0;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -28,8 +28,21 @@
     Bitstream Vera Sans Mono, Courier New, monospace;
 }
 
+.trystero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 2rem;
+}
+
+.navBar {
+  display: flex;
+  border-bottom: 1px solid #eaeaea;
+}
+
 .footer img {
   margin-left: 0.5rem;
+
 }
 
 .footer a {
@@ -49,12 +62,15 @@
   text-decoration: underline;
 }
 
+.markdown h1,
 .title {
   margin: 0;
   line-height: 1.15;
   font-size: 4rem;
 }
 
+.markdown h1,
+.markdown h2,
 .title,
 .description {
   text-align: center;
@@ -62,35 +78,57 @@
     Bitstream Vera Sans Mono, Courier New, monospace;
 }
 
+.markdown p,
+.markdown li {
+  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
+    Bitstream Vera Sans Mono, Courier New, monospace;
+}
+
+.markdown ul {
+  padding-left: 15%;
+}
+
+.markdown p,
+.markdown li,
 .description {
   line-height: 1.5;
   font-size: 1.5rem;
 }
 
 .code {
-  background: #A8DADC;
-  border-radius: 5px;
   padding: 0.75rem;
   font-size: 1.1rem;
   font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
     Bitstream Vera Sans Mono, Courier New, monospace;
 }
 
-.aboutMeButton {
-  background: #A8DADC;
+.navBarButton {
+  background: #D3EDEE;
   border-radius: 5px;
-  border: 1px solid #000000;
+  border: 1px solid #F1FAEE;
   padding: 0.75rem;
   font-size: 1.1rem;
+  width: 9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
     Bitstream Vera Sans Mono, Courier New, monospace;
 }
 
-.aboutMeButton:hover,
-.aboutMeButton:focus,
-.aboutMeButton:active {
+.navBarButton:hover,
+.navBarButton:focus,
+.navBarButton:active {
   color: #457B9D;
   border-color: #457B9D;
+}
+
+.markdown {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 800px;
 }
 
 .grid {
@@ -109,7 +147,7 @@
   padding: 1.5rem;
   text-align: left;
   color: inherit;
-  background: #A8DADC;
+  background: #CDDFE9;
   text-decoration: none;
   border: 1px solid #eaeaea;
   border-radius: 10px;
@@ -153,8 +191,8 @@
 }
 
 .profilePicDiv {
-  margin-top: 50px;
-  margin-bottom: 50px;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
 }
 
 @media (max-width: 600px) {

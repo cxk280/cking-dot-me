@@ -24,4 +24,4 @@ I’m a Northern Virginia-based software engineer currently working at Capital O
 
 Urbit is my primary personal programming interest. I run [geturbitid.com](https://www.geturbitid.com), the first hosting service for Urbit IDs. You can find me on the Urbit network as `~panmut-solneb`.
 
-Outside of programming, my main hobbies are classical music, literature, math, physics, and travel.
+Outside of programming, my main hobbies are classical music, literature, math, physics (especially SETI), and travel.

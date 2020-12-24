@@ -1,6 +1,8 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
+import Head           from 'next/head'
+import NavBar         from '../components/NavBar'
+import Footer         from '../components/Footer'
+import Image          from 'next/image'
+import styles         from '../styles/Home.module.css'
 import Link           from 'next/link'
 import { getPosts }   from './api/posts'
 
@@ -10,7 +12,7 @@ const Home = (props) => (
       <title>Christopher King</title>
       <link rel="icon" href="/pynchon-favicon.ico" />
     </Head>
-
+    <NavBar />
     <main className={styles.main}>
       <h1 className={styles.title}>
         Christopher King
@@ -19,15 +21,6 @@ const Home = (props) => (
       <p className={styles.description}>
         <code className={styles.code}>Software Engineer, Pianist, Traveler</code>
       </p>
-
-      <Link
-        href={`/about-me`}
-        as={`/about-me`}
-      >
-        <a>
-          <p className={styles.aboutMeButton}>About Me</p>
-        </a>
-      </Link>
 
       <div className={styles.profilePicDiv}>
         <Image
@@ -47,17 +40,7 @@ const Home = (props) => (
         </Link>
       ))}
     </main>
-
-    {/* FYI: The background color of my email image is #FFDBDE */}
-    {/* I created it at https://www.generateit.net/email-to-image/index.php */}
-    <footer className={styles.footer}>
-      Hit me up at&nbsp;&nbsp;
-      <Image
-        src="/go_away_bots.png"
-        width={149}
-        height={22}
-      />
-    </footer>
+    <Footer />
   </div>
 )
 

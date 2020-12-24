@@ -1,18 +1,28 @@
-import markdownToHtml from '../../lib/markdownToHtml'
-import aboutMeMarkdown from '../../_markdown/aboutMe.md'
-import styles from '../../styles/Markdown.module.css'
+import Head               from 'next/head'
+import NavBar             from '../../components/NavBar'
+import Footer             from '../../components/Footer'
+import markdownToHtml     from '../../lib/markdownToHtml'
+import aboutMeMarkdown    from '../../_markdown/aboutMe.md'
+import styles             from '../../styles/Home.module.css'
 
 const Index = (props) => (
-  <div
-    className={styles.markdown}
-    dangerouslySetInnerHTML={{ __html: props.content }}
-  />
+  <div className={styles.container}>
+    <Head>
+      <title>About Me</title>
+      <link rel="icon" href="/pynchon-favicon.ico" />
+    </Head>
+    <NavBar />
+    <main className={styles.main}>
+      <div
+        className={styles.markdown}
+        dangerouslySetInnerHTML={{ __html: props.content }}
+      >
+      </div>
+    </main>
+    <Footer />
+  </div>
 )
 
-Index.getInitialProps = async () => {
-  const content = await markdownToHtml(aboutMeMarkdown)
-  console.log(`content: ${content}`)
-  return { content: content }
-}
+Index.getInitialProps = async () => ({ content: await markdownToHtml(aboutMeMarkdown) })
 
 export default Index
