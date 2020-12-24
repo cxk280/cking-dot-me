@@ -6,6 +6,8 @@ import styles         from '../styles/Home.module.css'
 import Link           from 'next/link'
 import { getPosts }   from './api/posts'
 
+const getSubHeading = excerpt => excerpt.slice(0, excerpt.indexOf("\n"))
+
 const Home = (props) => (
   <div className={styles.container}>
     <Head>
@@ -32,10 +34,10 @@ const Home = (props) => (
       </div>
 
       {props.posts.map(post => (
-        <Link key={post.id} href={`/[slug]`} as={`/${post.slug}`}>
+        <Link key={post.id} href={`/posts/[slug]`} as={`/posts/${post.slug}`}>
           <a className={styles.card}>
             <h3>{post.title} &rarr;</h3>
-            <p>Something</p>
+            <p>{getSubHeading(post.excerpt)}</p>
           </a>
         </Link>
       ))}
@@ -44,9 +46,6 @@ const Home = (props) => (
   </div>
 )
 
-Home.getInitialProps = async () => {
-  const posts = await getPosts();
-  return { posts: posts }
-}
+Home.getInitialProps = async () => ({ posts: await getPosts() })
 
 export default Home

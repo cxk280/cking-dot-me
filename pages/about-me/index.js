@@ -15,6 +15,7 @@ const Index = (props) => (
     <main className={styles.main}>
       <div
         className={styles.markdown}
+        // The `remark` library imported in `markdownToHtml` automatically sanitizes the HTML string
         dangerouslySetInnerHTML={{ __html: props.content }}
       >
       </div>
