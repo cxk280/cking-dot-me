@@ -3,8 +3,8 @@ import GhostContentAPI from "@tryghost/content-api"
 // Create API instance with site credentials
 const api = new GhostContentAPI({
   url: 'https://christopherking.ghost.io',
-  key: 'e371b181591a8503af3db8ec90',
-  version: "v3"
+  key: process.env.NEXT_PUBLIC_GHOST_API_KEY,
+  version: 'v3'
 })
 
 export const getPosts = async () => await api.posts

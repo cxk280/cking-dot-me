@@ -18,7 +18,7 @@ const Home = props => {
   const [currentPage, setCurrentPage] = useState(1)
   const [currentPosts, setCurrentPosts] = useState(posts.slice(0, 5))
   const [checked, setChecked] = useState(true)
-  const postCount = props.posts.length
+  const postCount = posts.length
 
   const handlePaginationClick = (event, page) => {
     setChecked(false)
@@ -38,6 +38,7 @@ const Home = props => {
       <Head>
         <title>Christopher King</title>
         <link rel="icon" href="/pynchon-favicon.ico" />
+        <meta name="viewport" content="width=device-width, initial-scale=0.5, user-scalable=no" />
       </Head>
       <NavBar />
       <main className={styles.main}>
