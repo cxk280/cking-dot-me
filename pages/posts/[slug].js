@@ -1,4 +1,5 @@
 import Head                   from 'next/head'
+import { motion } from "framer-motion"
 import NavBar                 from '../../components/NavBar'
 import Footer                 from '../../components/Footer'
 import { getSinglePost }      from '../api/posts'
@@ -13,13 +14,18 @@ const PostPage = (props) => (
     </Head>
     <NavBar />
     <main className={styles.main}>
-      <div>
-        <h1 className={styles.markdown}>{props.post.title}</h1>
-        <div 
-          className={styles.markdown}
-          dangerouslySetInnerHTML={{ __html: sanitizeHtml(props.post.html) }} 
-        />
-      </div>
+      <motion.h1
+        className={styles.title}
+          layoutId="title"
+        >
+          {props.post.title}
+        </motion.h1>
+      <motion.p
+        className={styles.markdown}
+        layoutId="text"
+        className={styles.markdown}
+        dangerouslySetInnerHTML={{ __html: sanitizeHtml(props.post.html) }} 
+      />
     </main>
     <Footer />
   </div>

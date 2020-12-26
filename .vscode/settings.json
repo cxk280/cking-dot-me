@@ -2,6 +2,7 @@
   "conventionalCommits.scopes": [
     "index page",
     "about-me",
-    "posts"
+    "posts",
+    "every page"
   ]
 }

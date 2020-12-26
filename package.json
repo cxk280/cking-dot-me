@@ -11,6 +11,7 @@
     "@material-ui/core": "^4.11.2",
     "@material-ui/lab": "^4.0.0-alpha.57",
     "@tryghost/content-api": "^1.4.11",
+    "framer-motion": "^3.1.1",
     "jsdom": "^16.4.0",
     "next": "10.0.3",
     "raw-loader": "^4.0.2",

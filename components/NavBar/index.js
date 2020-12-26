@@ -1,24 +1,20 @@
 import styles from '../../styles/Home.module.css'
 import Link           from 'next/link'
+import NavButton from '../NavButton'
+import { motion } from "framer-motion"
 
 const NavBar = (props) => (
   <div className={styles.navBar}>
-    <Link
-      href={`/`}
-      as={`/`}
-    >
-      <a>
-        <p className={styles.navBarButton}>Home</p>
-      </a>
-    </Link>
-    <Link
-      href={`/about-me`}
-      as={`/about-me`}
-    >
-      <a>
-        <p className={styles.navBarButton}>About Me</p>
-      </a>
-    </Link>
+    <NavButton 
+      buttonHref={`/`}
+      buttonAs={`/`}
+      buttonText={'Home'}
+    />
+    <NavButton 
+      buttonHref={`/about-me`}
+      buttonAs={`/about-me`}
+      buttonText={'About Me'}
+    />
   </div>
 )
 
