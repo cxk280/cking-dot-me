@@ -90,7 +90,7 @@ const Home = props => {
           onChange={handlePaginationClick}
         />
       </main>
-      <motion.p 
+      <motion.p
         className={styles.description} 
         layoutId="githubLink"
         initial={{ scale: 0, opacity: 0 }}
