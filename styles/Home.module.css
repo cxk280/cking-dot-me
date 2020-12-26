@@ -79,24 +79,32 @@
     Bitstream Vera Sans Mono, Courier New, monospace;
 }
 
-.markdown p,
-.markdown li {
+/* .markdown p, */
+/* .markdown li {
   font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
     Bitstream Vera Sans Mono, Courier New, monospace;
-}
+} */
 
 .markdown ul {
   padding-left: 15%;
 }
 
-.markdown p,
-.markdown li,
+/* .markdown p, */
 .description {
   line-height: 1.5;
   font-size: 1.5rem;
 }
 
+.markdown li {
+  line-height: 1.6;
+  font-size: 1.1rem;
+  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
+    Bitstream Vera Sans Mono, Courier New, monospace;
+}
+
+.markdown p,
 .code {
+  line-height: 1.5;
   padding: 0.75rem;
   font-size: 1.1rem;
   font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
@@ -191,7 +199,7 @@
   border-radius: 50%;
 }
 
-.profilePicDiv {
+.profilePicFigure {
   margin-top: 3rem;
   margin-bottom: 3rem;
 }

@@ -4,6 +4,7 @@ import Image                            from 'next/image'
 import Link                             from 'next/link'
 import Pagination                       from '@material-ui/lab/Pagination'
 import Grow                             from '@material-ui/core/Grow'
+import { motion } from "framer-motion"
 
 import NavBar         from '../components/NavBar'
 import Footer         from '../components/Footer'
@@ -42,22 +43,33 @@ const Home = props => {
       </Head>
       <NavBar />
       <main className={styles.main}>
-        <h1 className={styles.title}>
+        <motion.h1
+          className={styles.title}
+          layoutId="title"
+        >
           Christopher King
-        </h1>
-
-        <p className={styles.description}>
+        </motion.h1>
+        <motion.p 
+          className={styles.description} 
+          layoutId="text"
+        >
           <code className={styles.code}>Software Engineer, Pianist, Traveler</code>
-        </p>
+        </motion.p>
 
-        <div className={styles.profilePicDiv}>
+        <motion.figure 
+          className="image"
+          layoutId="image"
+          initial={{ scale: 0, opacity: 0 }}
+          animate={{ scale: 0,  opacity: 1 }}
+          transition={{ delay: 0.15 }}
+        >
           <Image
             src="/chris_profile_cropped.jpg"
             width={150}
             height={150}
             className={styles.profilePic}
           />
-        </div>
+        </motion.figure>
 
         {currentPosts.map(post => (
           <Link key={post.id} href={`/posts/[slug]`} as={`/posts/${post.slug}`}>

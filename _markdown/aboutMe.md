@@ -1,5 +1,3 @@
-# About Me
-
 I’m a Northern Virginia-based software engineer currently working at Capital One HQ. My skillset includes the following technologies:
 
 - Javascript
