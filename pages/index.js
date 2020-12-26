@@ -1,16 +1,16 @@
-import { useState, useEffect }   from 'react'
+import { useState, useEffect }          from 'react'
 import Head                             from 'next/head'
 import Image                            from 'next/image'
 import Link                             from 'next/link'
 import Pagination                       from '@material-ui/lab/Pagination'
 import Grow                             from '@material-ui/core/Grow'
-import { motion } from "framer-motion"
+import { motion }                       from "framer-motion"
 
-import NavBar         from '../components/NavBar'
-import Footer         from '../components/Footer'
+import NavBar                           from '../components/NavBar'
+import Footer                           from '../components/Footer'
 
-import styles         from '../styles/Home.module.css'
-import { getPosts }   from './api/posts'
+import styles                           from '../styles/Home.module.css'
+import { getPosts }                     from './api/posts'
 
 const getSubHeading = excerpt => excerpt.slice(0, excerpt.indexOf("\n"))
 

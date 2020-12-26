@@ -1,6 +1,6 @@
 import Link           from 'next/link'
-import styles from '../../styles/Home.module.css'
-import { motion } from "framer-motion"
+import { motion }     from "framer-motion"
+import styles         from '../../styles/Home.module.css'
 
 const NavButton = props => (
   <Link

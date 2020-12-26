@@ -1,5 +1,5 @@
 import Head               from 'next/head'
-import { motion } from "framer-motion"
+import { motion }         from "framer-motion"
 import NavBar             from '../../components/NavBar'
 import Footer             from '../../components/Footer'
 import markdownToHtml     from '../../lib/markdownToHtml'
@@ -21,7 +21,7 @@ const Index = (props) => (
       >
         About Me
       </motion.h1>
-      <motion.p
+      <motion.div
         className={styles.markdown}
         layoutId="text"
         // The `remark` library imported in `markdownToHtml` automatically sanitizes the HTML string

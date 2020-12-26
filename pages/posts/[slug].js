@@ -1,10 +1,10 @@
 import Head                   from 'next/head'
-import { motion } from "framer-motion"
+import { motion }             from "framer-motion"
+import sanitizeHtml           from 'sanitize-html'
 import NavBar                 from '../../components/NavBar'
 import Footer                 from '../../components/Footer'
 import { getSinglePost }      from '../api/posts'
 import styles                 from '../../styles/Home.module.css'
-import sanitizeHtml           from 'sanitize-html'
 
 const PostPage = (props) => (
   <div className={styles.container}>
