@@ -21,7 +21,7 @@ const Index = (props) => (
       >
         About Me
       </motion.h1>
-      <motion.p
+      <motion.div
         className={styles.markdown}
         layoutId="text"
         // The `remark` library imported in `markdownToHtml` automatically sanitizes the HTML string
