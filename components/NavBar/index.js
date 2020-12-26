@@ -1,7 +1,5 @@
-import styles from '../../styles/Home.module.css'
-import Link           from 'next/link'
-import NavButton from '../NavButton'
-import { motion } from "framer-motion"
+import NavButton  from '../NavButton'
+import styles     from '../../styles/Home.module.css'
 
 const NavBar = (props) => (
   <div className={styles.navBar}>

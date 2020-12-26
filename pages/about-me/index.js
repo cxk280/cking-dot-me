@@ -1,5 +1,5 @@
 import Head               from 'next/head'
-import { motion } from "framer-motion"
+import { motion }         from "framer-motion"
 import NavBar             from '../../components/NavBar'
 import Footer             from '../../components/Footer'
 import markdownToHtml     from '../../lib/markdownToHtml'
