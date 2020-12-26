@@ -55,7 +55,6 @@ const Home = props => {
         >
           <code className={styles.code}>Software Engineer, Pianist, Traveler</code>
         </motion.p>
-
         <motion.figure 
           className="image"
           layoutId="image"
@@ -91,6 +90,15 @@ const Home = props => {
           onChange={handlePaginationClick}
         />
       </main>
+      <motion.p 
+        className={styles.description} 
+        layoutId="githubLink"
+        initial={{ scale: 0, opacity: 0 }}
+        animate={{ scale: 0,  opacity: 1 }}
+        transition={{ delay: 0.15 }}
+      >
+        <code className={styles.code}>View the source code for this site <a className={styles.githubLink} href="https://github.com/cxk280/cking-dot-me">here</a>.</code>
+      </motion.p>
       <Footer />
     </div>
   )
