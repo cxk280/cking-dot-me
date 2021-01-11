@@ -79,6 +79,7 @@ const Home = props => {
             >
               <a className={styles.card}>
                 <h3>{post.title} &rarr;</h3>
+                <h4>{`${post.created_at.slice(5,10)}-${post.created_at.slice(0,4)}`}</h4>
                 <p>{getSubHeading(post.excerpt)}</p>
               </a>
             </Grow>
