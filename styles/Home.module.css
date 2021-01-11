@@ -88,11 +88,15 @@
   font-size: 2vw;
 }
 
+.markdown a,
 .title a {
-  color: #0070f3;
+  color: #6A9EBE;
   text-decoration: none;
 }
 
+.markdown a:hover,
+.markdown a:focus,
+.markdown a:active
 .title a:hover,
 .title a:focus,
 .title a:active {
