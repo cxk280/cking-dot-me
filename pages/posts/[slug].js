@@ -9,7 +9,7 @@ import styles                 from '../../styles/Home.module.css'
 const PostPage = (props) => (
   <div className={styles.container}>
     <Head>
-      <title>About Me</title>
+      <title>{props.post.title}</title>
       <link rel="icon" href="/pynchon-favicon.ico" />
       <meta name="viewport" content="width=device-width, initial-scale=0.5, user-scalable=no" />
     </Head>
