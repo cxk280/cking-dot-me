@@ -59,11 +59,33 @@
   padding-bottom: 2rem;
 }
 
-.markdown h1,
 .title {
   margin: 0;
   line-height: 1.15;
   font-size: 6vw;
+  padding: 0 5rem 0 5rem;
+}
+
+.postTitle, 
+.markdown h1,
+.markdown h2,
+.postDate {
+  margin: 0;
+  line-height: 1.15;
+  padding: 0 5rem 0 5rem;
+  text-align: center;
+  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
+    Bitstream Vera Sans Mono, Courier New, monospace;
+}
+
+.postTitle {
+  font-size: 3.5vw;
+}
+
+.markdown h2,
+.postDate {
+  padding-top: 5vh;
+  font-size: 2vw;
 }
 
 .title a {
